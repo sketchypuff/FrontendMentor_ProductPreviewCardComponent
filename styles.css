@@ -51,6 +51,9 @@ table {
 }
 
 /* -------------START CSS HERE-------------- */
+html {
+    font-size: 14px;
+}
 
 body {
     width: 100vw;
@@ -77,10 +80,113 @@ body {
 
 .card__content {
     flex: 1;
+    max-width: 50%;
+    padding: 46px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__content p:nth-of-type(1) {
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.14rem;
+    margin-bottom: 9.5%;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__content p:nth-of-type(2) {
+    font-family: Fraunces, serif;
+    font-size: 3rem;
+    margin-bottom: 9.5%;
+    color: hsl(212, 21%, 14%);
+
+
+}
+
+.card__content p:nth-of-type(3) {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.28rem;
+    margin-bottom: 12%;
+    color: hsl(228, 12%, 48%);
+    line-height: 150%;
+}
+
+.card__content--price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.card__content--price p:nth-of-type(1) {
+    font-family: Fraunces, serif;
+    font-size: 3rem;
+    color: #3D8168;
+    margin: 0;
+    
+}
+
+.card__content--price p:nth-of-type(2) {
+    font-family: Montserrat, serif;
+    font-size: 1.28rem;
+    color: hsl(228, 12%, 48%);
+    margin: 0;
+    
+}
+
+button {
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    font-size: 1.42rem;
+    font-weight: 700;
+    justify-self: flex-end;
+    background-color: #3D8168;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 23px 0;
+
+
+}
+
+button:hover {
+     background-color: #1A4031;
+}
+
+/* -----------------Responsiveness------------------ */
+
+
+@media (max-width: 799px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .card__content {
+        align-items: center;
+        height: 50%;
+        padding: 25px;
+        
+    }
+
+    .card__image {
+        
+    }
+
 }
 
 /* TO DO
 - Position bakground image
-- Font upload
-- Text styling
+- Having p:nth-of-type() in a div but it is 
+also affecting th first p of other divs
+- Responsiveness: Split is not 50-50 in mobile layout
+*/
+
+/* Class library
+card
+    card__image
+    card__content
+        card__content--price
 */
