@@ -165,8 +165,12 @@ button:hover {
         flex-direction: column;
         max-width: 400px;
         max-height: 600px;
-        align-self: center;
     }
+
+    .card__image {
+        background-image: url("images/image-product-mobile.jpg");
+    }
+    
 
     .card__content {
         padding: 25px 23px;
